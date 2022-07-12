@@ -9,18 +9,22 @@ main {
   display: grid;
   place-items: center;
   background: rgba(0, 0, 0, 0.377);
-  width: 60%;
+  width: 768px;
   margin: auto;
 }
 
 .light_container {
-  width: 100px;
-  height: 110px;
+  width: 50px;
+  height: 50px;
 }
 
 .light_bulb {
   width: 100%;
   height: 100%;
+  box-shadow: 0px 0px;
+}
+.blink {
+  opacity: 0.5;
 }
 
 section {
@@ -30,4 +34,45 @@ section {
 
 section div {
   margin: 3px;
+}
+
+div {
+  border: 1px solid teal;
+}
+
+@media (min-width: 576px) {
+  div {
+    border: 1px solid teal;
+  }
+  .light_container {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (min-width: 768px) {
+  div {
+    border: 2px solid teal;
+  }
+  .light_container {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  div {
+    border: 3px solid red;
+  }
+  .light_container {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 1080px) {
+  div {
+    border: 4px solid pink;
+  }
+  .light_container {
+    width: 200px;
+    height: 200px;
+  }
 }
